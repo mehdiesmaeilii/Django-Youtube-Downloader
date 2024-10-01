@@ -1,0 +1,30 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'youtube_app/style.css' %}">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home page</title>
+  </head>
+  <body ><center><br>
+    <h1 class="header">Youtube Video Downloader</h1><br>
+    <div>
+    <form action="linksubmit" method="GET">
+      {% block link %}
+      <input
+        class="input"
+        type="text"
+        placeholder="paste youtube link here"
+        name="inp"
+      /><br /><br />
+      <button class="button" type="submit">search</button><br />
+      {% endblock %}
+    </form>
+    {% block content %}
+  {% endblock %}
+  </div>
+  </center>
+  
+  </body>
+</html>

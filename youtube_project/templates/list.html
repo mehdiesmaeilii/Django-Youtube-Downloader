@@ -1,0 +1,25 @@
+{% extends "index.html" %} {% block link %}
+
+<input id="url" type="text" value="{{url}}" />
+
+{% endblock %} {% block content %}
+<table>
+  <div><iframe src="{{embed}}"></iframe><br><br></div><br><br>
+  <div>
+    <thead>
+      <tr>
+        <th>Resolutions</th>
+        <th>Download</th>
+      </tr>
+    </thead>
+    {% for i in lp %}
+    <tbody>
+      <tr>
+      <td>{{i}}{{url2}}</td>
+      <td><a href="{{i}}" >Downloads</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </div>
+</table>
+{% endblock %}
